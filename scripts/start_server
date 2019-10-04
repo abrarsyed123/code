@@ -1,0 +1,12 @@
+#!/bin/bash
+cd /home/ubuntu/code
+
+isExistApp = `pgrep apache2`
+if [[ -n  $isExistApp ]]; then
+    systemctl stop apache2
+fi
+
+apt-get remove apache2
+
+pm2 delete all
+pm2 start server.js
