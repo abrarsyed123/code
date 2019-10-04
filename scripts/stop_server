@@ -1,12 +1,10 @@
 #!/bin/bash
-sudo pm2 stop server.js
-
-# isExistApp=`sudo pgrep pm2`
-# if [[ -n  $isExistApp ]]; then
-    # sudo pm2 kill
-    # sudo pm2 stop server.js
-    # you can remove the crontab as well
-# fi
+isExistApp=`sudo pgrep pm2`
+if [[ -n  $isExistApp ]]; then
+     sudo pm2 kill
+     sudo pm2 stop server.js
+     you can remove the crontab as well
+fi
 
 # isExistApp=`pgrep pm2`
 # if [[ -n  $isExistApp ]]; then
