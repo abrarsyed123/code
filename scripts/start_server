@@ -1,7 +1,0 @@
-#!/bin/bash
-# sudo chmod 755 /home/ubuntu/dump/server.js # optional
-# this will restart app/server on instance reboot
-crontab -l | { cat; echo "@reboot pm2 start /home/ubuntu/dump/server.js -i 0 --name \"server.js\""; } | crontab -
-sudo pm2 stop server.js
-# actually start the server
-sudo pm2 start /home/ubuntu/dump/server.js -i 0 --name "server.js"

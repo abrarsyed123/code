@@ -1,0 +1,4 @@
+#!/bin/bash
+mkdir /home/ubuntu/code
+cd /home/ubuntu/code
+sudo npm install
